@@ -19,6 +19,10 @@ class RoomStore {
     return this.rooms.get(id);
   }
 
+  unusedMethod() {
+    var x = 1;
+  }
+
   findByName(name) {
     return [...this.rooms.values()].find((room) => room.name === name);
   }
