@@ -1,0 +1,29 @@
+{
+  "name": "contract-ci-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Учебный проект: CI и контрактное тестирование API",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "lint": "eslint . --max-warnings 0",
+    "test": "jest",
+    "test:unit": "jest tests/unit",
+    "test:ci": "jest --coverage",
+    "build": "node scripts/build.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": ["src/**/*.js", "!src/server.js"]
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "jest": "^30.5.2",
+    "supertest": "^7.3.1"
+  }
+}
